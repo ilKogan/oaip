@@ -64,7 +64,7 @@ void SelectAndSizeOfType()
 						cout << endl << "Ошибка : Введено некоректное название типа" << endl;
 					}
 	}
-void DrawTrangle()
+void DrawTriangle()
 	{
 		char ch,
 			space   = ' '; 
@@ -92,7 +92,7 @@ void DrawTrangle()
 int main()
 {
 	void(*SelPtr)() = &SelectAndSizeOfType;
-	void(*DrawTranglePtr)() = &DrawTrangle;
+	void(*DrawTrianglePtr)() = &DrawTriangle;
 
 #pragma region
 
@@ -110,7 +110,7 @@ int main()
 	printf("\nTask 2\n");
 	printf("\nThis program draws a triangle\n");
 
-	Exit(DrawTrangle);
+	Exit(DrawTriangle);
 #pragma endregion --------------TASK 2----------------
 #pragma region
 	printf("Task 3");
