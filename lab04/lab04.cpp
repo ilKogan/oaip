@@ -291,44 +291,44 @@ int main()
 	void(*DrawStarPtr)() = &DrawStar;
 	void(*DrawTriangleTwoPtr)() = &DrawTriangleTwo;
 
-// #pragma region--------------TASK 1----------------
+#pragma region--------------TASK 1----------------
 
-// 	printf("Task 1\n");
+	printf("Task 1\n");
 
-// 	printf("This program shows the size of an object in byte.");
-// 	printf("To start program, select the type\n\n1.INT\n2.FLOAT\n3.DOUBLE\n4.CHAR\n");
-
-
-
-// 	Exit(SelPtr);
-// #pragma endregion This program shows the size of an object in byte
-// #pragma region--------------TASK 2----------------
-
-// 	printf("\nTask 2\n");
-// 	printf("\nThis program draws a triangle\n");
-
-// 	Exit(DrawTriangle);
-// #pragma endregion This program draws a triangle
-// #pragma region--------------TASK 3----------------
-// 	printf("Task 3\n");
-// 	printf("Sinitsa \t\t\t Faculty: Huevpinanie \nElisey \t\t\t Number group: Hmm \nDmitrievicc\bh\n");
-// 	printf("text with one letter missing \r \n\n");
-
-// 	system("pause");
-// #pragma endregion This program print my name and other
-// #pragma region--------------TASK 4----------------
-// 	printf("Task 4\n");
-
-// 	SetConsoleOutputCP(1251);
-// 	SetConsoleCP(1251);
-
-// 	char name[60];
+	printf("This program shows the size of an object in byte.");
+	printf("To start program, select the type\n\n1.INT\n2.FLOAT\n3.DOUBLE\n4.CHAR\n");
 
 
-// 	puts("What is your name?\n");
-// 	gets_s(name);
-// 	printf("Hello, %s ", &name);
-// #pragma endregion This program simulation dialog
+
+	Exit(SelPtr);
+#pragma endregion This program shows the size of an object in byte
+#pragma region--------------TASK 2----------------
+
+	printf("\nTask 2\n");
+	printf("\nThis program draws a triangle\n");
+
+	Exit(DrawTriangle);
+#pragma endregion This program draws a triangle
+#pragma region--------------TASK 3----------------
+	printf("Task 3\n");
+	printf("Sinitsa \t\t\t Faculty: Huevpinanie \nElisey \t\t\t Number group: Hmm \nDmitrievicc\bh\n");
+	printf("text with one letter missing \r \n\n");
+
+	system("pause");
+#pragma endregion This program print my name and other
+#pragma region--------------TASK 4----------------
+	printf("Task 4\n");
+
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
+
+	char name[60];
+
+
+	puts("What is your name?\n");
+	gets_s(name);
+	printf("Hello, %s ", &name);
+#pragma endregion This program simulation dialog
 #pragma region--------------TASK 5.1----------------
 	printf("\nTask 5.1\n");
 	printf("\nThis program draws a triangle in center of console window\n");
@@ -336,15 +336,15 @@ int main()
 
 	Exit(DrawTriangleTwo);
 #pragma endregion This program draws a triangle in center of console window
-// #pragma region--------------TASK 5.2----------------
-// 	printf("\nTask 5.2\n");
-// 	printf("\nFarmer at the beginning of winter increases\n");
-// 	printf("the nowPrice of milk at p procent and in the summer reduces by\n");
-// 	printf("the same percentage. whether the nowPrice change on milk\n");
-// 	printf("and, if so, in what direction and by how much, after n years?\n");
+#pragma region--------------TASK 5.2----------------
+	printf("\nTask 5.2\n");
+	printf("\nFarmer at the beginning of winter increases\n");
+	printf("the nowPrice of milk at p procent and in the summer reduces by\n");
+	printf("the same percentage. whether the nowPrice change on milk\n");
+	printf("and, if so, in what direction and by how much, after n years?\n");
 
-// 	Exit(CalculatePriceMilk);
-// #pragma endregion This program solves the problem about a farmer
+	Exit(CalculatePriceMilk);
+#pragma endregion This program solves the problem about a farmer
 #pragma region--------------TASK 6.1----------------
 	printf("\nTask 6.1\n");
 	printf("\nDraw Star\n");
