@@ -1,13 +1,7 @@
 ﻿
-
 #include <iomanip>
 #include <conio.h>
 
-using namespace std;
-
-
-int main()
-{		
 
 #define TASK_2_X 3
 #define TASK_3_K 4
@@ -19,6 +13,13 @@ int main()
 #define TASK_5_T 6
 #define TASK_5_Y -1.2
 #define TASK_5_X 0.4e6
+
+
+using namespace std;
+
+int main()
+{		
+
 
 #pragma region
 	float 
