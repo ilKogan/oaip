@@ -2,6 +2,9 @@
 #include <iomanip>
 #include <windows.h>
 
+#define height 23
+#define weight 48
+#define space ' '
 
 
 using namespace std;
@@ -94,27 +97,26 @@ void SelectAndSizeOfType()
 	}
 void DrawTriangle()
 	{
-		char ch,
-			space   = ' '; 
+		char ch, 
 		int pattern = -1;
-		int empty;
+		int size;
 
 		cout << "Enter char\n";
 		cin >> ch;
 		cout << "Enter size\n";
-		cin >> empty;
+		cin >> size;
 		cout <<endl;
 	
-		for (int s = empty - 1; s > 0; s--)
+		for (int s = size - 1; s > 0; s--)
 		{
 			
 			pattern += 2;
 
-			cout << setw(empty) << setfill(space)<<space;
+			cout << setw(size) << setfill(space)<<space;
 			cout << setw(pattern) << setfill(ch)<<ch;
-			cout << setw(empty) << setfill(space)<<space<<endl;
+			cout << setw(size) << setfill(space)<<space<<endl;
 
-			empty -= 1;
+			size -= 1;
 		}   
     }
 void CalculatePriceMilk()
@@ -154,51 +156,50 @@ void CalculatePriceMilk()
 			cout<<"Year: "<<nowYear<<endl;
 
 			nowPrice += differencePrice;
-			cout<<"Winter difference Price: "<< differencePrice<<endl;
-			cout<<"Winter nowPrice :"<< nowPrice<<endl;
+			cout<<"Winter difference price: "<< differencePrice<<endl;
+			cout<<"Winter price :"<< nowPrice<<endl;
 
 			onePercentPrice = nowPrice / 100;
 			differencePrice = onePercentPrice * percent;
 
 			nowPrice -= differencePrice;
-			cout<<"Summer difference Price: "<< differencePrice << endl;
-			cout<<"Summer Price: "<< nowPrice << endl << endl;
+			cout<<"Summer difference price: "<< differencePrice << endl;
+			cout<<"Summer price: "<< nowPrice << endl << endl;
 			
 
 		}
 
-		cout<<"Year: "<<firstYear<<" Price: "<< firstPrice << endl;
-		cout<<"Year: "<<nowYear<<" Price: "<< nowPrice << endl;
+		cout<<"Year: "<<firstYear<<" price: "<< firstPrice << endl;
+		cout<<"Year: "<<nowYear<<" price: "<< nowPrice << endl;
 		cout<<"Difference : -"<< firstPrice - nowPrice << endl << endl;
 	}
 void DrawTriangleTwo()
 {
 
 	char ch,
-		space = ' ';
 	int pattern = -1;
-	int empty;
-	int ident;
+	int size;
+	int indent;
 	
 	cout << "Enter char\n";
 	cin >> ch;
 	cout << endl;
 
-	ident = floor(30 * ConsoleInfo().x / 100);
-	empty = floor(75 * ConsoleInfo().y / 100);
+	indent = floor(30 * ConsoleInfo().x / 100);
+	size = floor(75 * ConsoleInfo().y / 100);
 
 
-	for (int s = empty - 1; s > 0; s--)
+	for (int s = size - 1; s > 0; s--)
 	{
 
 		pattern += 2;
 
-		cout << setw(ident) << setfill(space) << space;
-		cout << setw(empty) << setfill(space) << space;
+		cout << setw(indent) << setfill(space) << space;
+		cout << setw(size) << setfill(space) << space;
 		cout << setw(pattern) << setfill(ch) << ch;
-		cout << setw(empty) << setfill(space) << space << endl;
+		cout << setw(size) << setfill(space) << space << endl;
 
-		empty -= 1;
+		size -= 1;
 	}
 
 	cout << "Console Window\n Weight:" << ConsoleInfo().x << endl;
@@ -222,11 +223,11 @@ void DistanceTwoPoint()
 	}
 void DrawStar()
 	{
-		const int height = 23;
-		const int weight = 48;
+
+
 		
 		char pattern;
-		char empty = ' ';
+		char size = ' ';
 		bool matrix[height][weight] = {
 			{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 			{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -256,16 +257,16 @@ void DrawStar()
 		cout<< "Enter char\n";
 		cin >> pattern;
 
-		int ident = floor(30 * ConsoleInfo().x / 100);
+		int indent = floor(30 * ConsoleInfo().x / 100);
 
 		for(int i = 0;i < height;i++)
 		{
-			cout << setw(ident) << setfill(empty) << empty;
+			cout << setw(indent) << setfill(size) << size;
 			for(int j = 0;j < weight; j++)
 			{
 				if(matrix[i][j]==false)
 				{
-					cout<<empty;
+					cout<<size;
 				}else{
 					cout<<pattern;
 				}
@@ -326,8 +327,8 @@ int main()
 
 
 	puts("What is your name?\n");
-	gets_s(name);
-	printf("Hello, %s ", &name);
+	cin >> name;
+	printf("\nHello, %s ", &name);
 #pragma endregion This program simulation dialog
 #pragma region--------------TASK 5.1----------------
 	printf("\nTask 5.1\n");
