@@ -206,7 +206,6 @@ void DrawTriangleTwo()
 	cout << "Height:" << ConsoleInfo().y << endl;
 }
 
-
 void DistanceTwoPoint()
 	{
 		vector2 m1,m2;
