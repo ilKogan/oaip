@@ -3,25 +3,40 @@
 #include <stdio.h>
 #include <windows.h>
 
+#define x_1 4.e-3
+#define s2 1.1
+#define ti ".............."
 
 using namespace std;
 
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    enum ConsoleColor 
+    {
+        Black = 0,
+        Green = 2,
+        Red = 4,
+        White = 15,
+        Yellow = 6
+    };
+
+
 void Task1()
 {
-    double b, z, j,
-        x = 4.e-3,
-        s = 1.1;
+    double b, z, j;
+       
 
     cout << "Please write j \n";
     cin >> j;
 
 
 
-    b = s + (5 * x + j);
+    b = s2 + (5 * x_1 + j);
 
-    b < 1.5 ? z = sqrt(x + 0.3 * j) + b : z = abs(x * j + b);
+    b < 1.5 ? z = sqrt(x_1 + 0.3 * j) + b : z = abs(x_1 * j + b);
 
     cout<<"j = " << j << "\nz = " << z << endl;
+    system("pause");
 
 }
 void Task2()
@@ -42,7 +57,7 @@ void Task2()
     if (mn > z) mn = z;
 
     cout << "max(x + y + z, xyz) * min(x, y, z) = "<<mn*mx;
-
+    system("pause");
 }
 void Task3()
 {
@@ -67,7 +82,7 @@ void Task3()
     default: puts("What? you say something wrong!");
         break;
     }
-
+    system("pause");
 }
 void Task4()
 {
@@ -92,7 +107,7 @@ void Task4()
         cout << "\nX2 = " << x2;
     }
 
-
+    system("pause");
 
 
 }
@@ -115,7 +130,7 @@ void Task5_6()
     cout << "This three digit number has\n";
     cout << "0 : "<<zero<<endl;
     cout << "1 : "<<one<<endl;
-
+    system("pause");
 }
 void Task5_13()
 {
@@ -157,22 +172,11 @@ void Task5_13()
     }
 
     cout << "\nMy nashli " << s << answer << " v lesy\n";
-
-    
-    
-    Task5_13();
-  
+    system("pause");
 }
 void Task7_2()
 {
-    enum ConsoleColor {
-        Black = 0,
-        Green = 2,
-        Red = 4,
-        White = 15
-    };
 
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     //This massive need for calculate position figures
     int b[8][8] = {
     { {1} ,{2} ,{3} ,{4} ,{5} ,{6} ,{7} ,{8}  },
@@ -341,15 +345,49 @@ void Task7_2()
     }
     SetConsoleTextAttribute(hConsole, (WORD)((Black << 4) | White));
 
+    system("pause");
+}
+void ConsoleMenu()
+{
+    int choice;
+    SetConsoleTextAttribute(hConsole, (WORD)((Black << 4) | Green));
+    cout << "------CHANGE TASK LAB 5------"<<endl;
 
+    SetConsoleTextAttribute(hConsole, (WORD)((Black << 4) | Yellow));
+    cout << "1  | "<<ti<<" TASK 1\n2  | " << ti << " TASK 2\n3  | " << ti << " TASK 3\n4  | " << ti << " TASK 4\n56 | " << ti << " TASK 5.6\n513| " << ti << " TASK 5.13\n7  | " << ti << " TASK 7.2\n";
+
+    SetConsoleTextAttribute(hConsole, (WORD)((Black << 4) | Green));
+    cout << "-----------------------------" << endl;
+
+    SetConsoleTextAttribute(hConsole, (WORD)((Black << 4) | White));
+
+    cin >> choice;
+
+    switch (choice)
+    {
+     case 1:    Task1();
+            break;
+     case 2:    Task2();
+            break;
+     case 3:    Task3();
+            break;
+     case 4:    Task4();
+            break;
+     case 56:   Task5_6();
+            break;
+     case 513:  Task5_13();
+            break;
+     case 7:    Task7_2();
+            break;
+    default:
+        break;
+    }
+
+    ConsoleMenu();
 }
 
 
 int main()
 {
-
-    Task7_2();
-
-    system("pause");
-
+    ConsoleMenu();
 }
