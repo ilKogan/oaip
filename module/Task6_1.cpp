@@ -2,15 +2,15 @@
 #include <iomanip>
 #include "headers/ConsoleScreenInfo.h"
 
-#define height 23
-#define weight 48
+#define HEIGHT 23
+#define WEIGHT 48
 
 
 void Task6_1() {
 	printf("\nTask 6.1\n");
 	printf("\nDraw Star\n");
 
-	bool matrix[height][weight]{
+	bool matrix[HEIGHT][WEIGHT]{
 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
