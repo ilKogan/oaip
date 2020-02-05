@@ -9,6 +9,7 @@ void Task5_13() {
 	std::cout << "Skoliko my nahli gribov?\n" << std::endl;
 	std::cin >> s;
 
+
 	if (s.size() != 0) {
 		if (s[s.size() - 1] == 49) {
 			if (s.size() > 1 && s[s.size() - 2] == 49) {
