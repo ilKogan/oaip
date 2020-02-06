@@ -9,7 +9,6 @@ void Task7()
 
   cin >> input;
 
-
   for (number = 2; number <= input; number++) 
   {
     
