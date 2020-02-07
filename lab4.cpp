@@ -1,6 +1,7 @@
 #include"lab4.h"
+#include "module/DrawFromFile.h"
 
-#define NUM_LAB "5"
+#define NUM_LAB "4"
 #define NUM_TASK_1 "1"
 #define NUM_TASK_2 "2"
 #define NUM_TASK_3 "3"
@@ -10,7 +11,7 @@
 #define NUM_TASK_7 "6.1"
 #define NUM_TASK_8 "6.2"
 #define TIRE "........"
-
+ 
 int main() 
 {
 	
@@ -52,4 +53,5 @@ int main()
 	}
 
 	main();
+
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{A04CF355-0C56-40BD-9C70-223C75FC7A17}</ProjectGuid>
+    <ProjectGuid>{2FD5A4B4-EA7E-4201-86EA-F3A597C063FB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>lab04</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -153,20 +153,33 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="lab4.cpp" />
+    <ClCompile Include="module\calculateDistance.cpp" />
     <ClCompile Include="module\ConsoleScreenInfo.cpp" />
-    <ClCompile Include="module\Task1.cpp" />
-    <ClCompile Include="module\Task2.cpp" />
-    <ClCompile Include="module\Task3.cpp" />
-    <ClCompile Include="module\Task4.cpp" />
-    <ClCompile Include="module\Task5_1.cpp" />
-    <ClCompile Include="module\Task5_2.cpp" />
-    <ClCompile Include="module\Task6_1.cpp" />
-    <ClCompile Include="module\Task6_2.cpp" />
+    <ClCompile Include="module\DrawFromFile.cpp" />
+    <ClCompile Include="module\DrawTriangle.cpp" />
+    <ClCompile Include="Task1.cpp" />
+    <ClCompile Include="Task2.cpp" />
+    <ClCompile Include="Task3.cpp" />
+    <ClCompile Include="Task4.cpp" />
+    <ClCompile Include="Task5_1.cpp" />
+    <ClCompile Include="Task5_2.cpp" />
+    <ClCompile Include="Task6_1.cpp" />
+    <ClCompile Include="Task6_2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="module\headers\ConsoleScreenInfo.h" />
-    <ClInclude Include="module\headers\vector2.h" />
+    <ClInclude Include="module\calculateDistance.h" />
+    <ClInclude Include="module\ConsoleScreenInfo.h" />
+    <ClInclude Include="module\DrawFromFile.h" />
+    <ClInclude Include="module\DrawTriangle.h" />
+    <ClInclude Include="module\Point.h" />
     <ClInclude Include="lab4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.MD" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="module\matrix.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

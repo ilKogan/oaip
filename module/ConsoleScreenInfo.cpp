@@ -1,11 +1,12 @@
 #include <windows.h>
 #include <iostream>
-#include "headers/ConsoleScreenInfo.h"
+#include "ConsoleScreenInfo.h"
 
 
-vector2 ConsoleScreenInfo() 
+
+Point ConsoleScreenInfo() 
 {
-	vector2 screen;
+	Point screen;
 
 	HANDLE hWndConsole;
 	if (hWndConsole = GetStdHandle(-12)) {
