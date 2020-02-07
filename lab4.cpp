@@ -11,13 +11,11 @@
 #define NUM_TASK_7 "6.1"
 #define NUM_TASK_8 "6.2"
 #define TIRE "........"
- 
-int main() 
-{
-	
+
+int main() {
 
 	int choice;
-	std::cout << "	------CHANGE TASK LAB "<< NUM_LAB <<"------"<< std::endl;
+	std::cout << "	------CHANGE TASK LAB " << NUM_LAB << "------" << std::endl;
 	std::cout << "	1  | " << TIRE << " TASK " << NUM_TASK_1 << "\n";
 	std::cout << "	2  | " << TIRE << " TASK " << NUM_TASK_2 << "\n";
 	std::cout << "	3  | " << TIRE << " TASK " << NUM_TASK_3 << "\n";
@@ -30,8 +28,7 @@ int main()
 
 	std::cin >> choice;
 
-	switch (choice) 
-	{
+	switch (choice) {
 	case 1: Task1();
 		break;
 	case 2: Task2();

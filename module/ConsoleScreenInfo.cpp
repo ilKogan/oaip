@@ -4,8 +4,7 @@
 
 
 
-Point ConsoleScreenInfo() 
-{
+Point ConsoleScreenInfo() {
 	Point screen;
 
 	HANDLE hWndConsole;

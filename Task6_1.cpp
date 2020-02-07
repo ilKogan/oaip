@@ -5,8 +5,7 @@
 
 
 #define SPACE ' '
-void Task6_1() 
-{
+void Task6_1() {
 	printf("\nTask 6.1\n");
 	printf("\nDraw Star\n");
 

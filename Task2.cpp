@@ -3,8 +3,7 @@
 #include "module/DrawTriangle.h"
 
 
-void Task2() 
-{
+void Task2() {
 	printf("\nTask 2\n");
 	printf("\nThis program draws a triangle\n");
 
@@ -17,5 +16,5 @@ void Task2()
 	std::cin >> sizes;
 	std::cout << std::endl;
 
-	DrawTriangle(sizes,ch,false);
+	DrawTriangle(sizes, ch, false);
 }

@@ -1,7 +1,6 @@
 #include <iostream>
 
-void Task4() 
-{
+void Task4() {
 	printf("Task 4\n");
 	char name[60];
 	puts("What is your name?\n");
