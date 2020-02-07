@@ -1,6 +1,5 @@
 #include <iostream>
 #include <iomanip>
-#include "module/ConsoleScreenInfo.h"
 #include "module/DrawFromFile.h"
 
 
