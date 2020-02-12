@@ -8,13 +8,5 @@ void Task7()
  
   int one, two, three;
   cin >> input;
-  for (int i = 10; i < input; i++) 
-  {
-    if (isSuperPrime(i)) 
-    {
-      cout << i<<endl;
-    }
-  }
-
-    Task7();
+  isSuperPrime(input);
 }

@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <list>
+#include <algorithm> 
+#include <sstream>
 
-#define PERMUTATION(a,b,c) (a * 100) + (b * 10) + c;
+#define RADIX 10
+
 
 bool isPrime(int number, int step = 2) {
 	if (number == step) {
@@ -12,53 +16,47 @@ bool isPrime(int number, int step = 2) {
 		return false;
 	}
 }
+//узнать про масиивы и указатели
+//list<int> convertNumberToArray(int number, list<int> state = list<int>()) {
+//	int digit = number % RADIX;
+//	number /= RADIX;
+//	state.push_front(digit);
+//
+//	if (number < 9) {
+//		state.push_front(number);
+//		return state;
+//	}
+//	return convertNumberToArray(number, state);
+//}
+void convertNumberToArray(int number, int* state, int& size) {
+	int digit = number % RADIX;
+	number /= RADIX;
+	state[size++] = digit;
+	
 
-bool isSuperPrime(int numbers) {
-	int size = 1;
-	int n1, n2, n3, n4;
-	int num;
-
-	if (numbers <= 9) {
-		size = 1;
-	} else if (numbers <= 99) {
-		size = 2;
-	} else if (numbers <= 999) {
-		size = 3;
+	if (number < 9) {
+		state[size++] = number;
+		return;
 	}
 
+	return convertNumberToArray(number,state, size);
+}
 
-	if (isPrime(numbers) && size == 1) {
-		return true;
-	}
-	if (isPrime(numbers) && size == 2) {
-		n1 = numbers / 10;
-		n2 = numbers % 10; std::cout << " n1-" << n1 << " n2-" << n2 << " num-" << numbers;
-		num = (n2 * 10) + n1; std::cout << "-and-" << num << std::endl;
-		if (isPrime(num)) {
-			return true;
-		}
-	}
-	if (isPrime(numbers) && size == 3) {
-		n1 = numbers / 100;
-		n2 = (numbers / 10) % 10;
-		n3 = numbers % 10;
+bool isSuperPrime(int number) {
+		
+	int size = 0;
+	int* state = new int;
+	convertNumberToArray(number, state, size);
+	
 
-		num = PERMUTATION(n1, n3, n2);
-		if (isPrime(num)) {
-			num = PERMUTATION(n2, n3, n1);
-			if (isPrime(num)) {
-				num = PERMUTATION(n2, n1, n3);
-				if (isPrime(num)) {
-					num = PERMUTATION(n3, n2, n1);
-					if (isPrime(num)) {
-						num = PERMUTATION(n3, n1, n2);
-						if (isPrime(num)) {
-							return true;
-						}
-					}
-				}
-			}
-		}
-	}
+	do {
+		//TODO:: Array of ints to number
+		//TODO:: CHECK IS PRIME
+		//
+		std::cout << state[0] << state[1] <<std::endl;
+		//isPrime(numbera)
+	} while (std::next_permutation(state, state + size));
 
+	return false;
+	
 }
