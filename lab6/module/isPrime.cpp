@@ -28,8 +28,7 @@ bool isPrime(int number, int step = 2) {
 //	}
 //	return convertNumberToArray(number, state);
 //}
-std::string revers(std::string const& s) 
-{
+std::string revers(std::string const& s) {
 	std::string rev(s.rbegin(), s.rend());
 	return rev;
 }
@@ -38,49 +37,40 @@ void convertNumberToArray(int number, int* state, int& size) {
 	int digit = number % RADIX;
 	number /= RADIX;
 	state[size++] = digit;
-	
+
 
 	if (number < 9) {
 		state[size++] = number;
 		return;
 	}
 
-	return convertNumberToArray(number,state, size);
+	return convertNumberToArray(number, state, size);
 }
 
-int convertArrayToNumber(int count,int state[],int size,std::string fullnumber)
-{
-	fullnumber = (fullnumber + std::to_string(state[count++]));
-	if (size == count) 
-	{	
-		fullnumber = revers(fullnumber);
-		return std::stoi(fullnumber);
+int convertArrayToNumber(int count, int state[], int result) {
+	if (state[count] == state[0]) {
+		return result;
 	}
-	return convertArrayToNumber(count,state,size,fullnumber);
+
+	result += state[count] * pow(10, --count);
+	return convertArrayToNumber(count, state, result);
 }
 
 
 bool isSuperPrime(int number) {
-		
+
 	int size = 0;
 	int* state = new int;
-	int result;
+	int results = 0;
+	
 
 	convertNumberToArray(number, state, size);
-	
+
 	do {
-		//TODO:: Array of ints to number
-		//TODO:: CHECK IS PRIME
-		/*std::cout << state[0] << state[1] <<state[3]<<std::endl*/
-		std::string fullnumber = "";
-
-		result = convertArrayToNumber(0,state,size,fullnumber);
-		if (isPrime(result)) {
-			std::cout << result << std::endl;
-		}
-
+		results = convertArrayToNumber(size, state, results);
+		if (isPrime(results)) std::cout << results << std::endl;
 	} while (std::next_permutation(state, state + size));
 
 	return false;
-	
+
 }
