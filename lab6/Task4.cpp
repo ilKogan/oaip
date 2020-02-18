@@ -1,7 +1,7 @@
 #include <iomanip>
 #include <iostream>
 
-#define tir '-'
+
 
 void Task4() {
 	int n, i, j;
@@ -15,7 +15,7 @@ void Task4() {
 
 			if (i == 1) {
 				std::cout << std::endl;
-				std::cout << std::setw(n * 5) << std::setfill(tir) << tir << std::endl;
+				std::cout << std::setw(n * 5) << std::setfill("-") << tir << std::endl;
 			}
 
 			printf("\n");
@@ -24,4 +24,3 @@ void Task4() {
 	}
 
 }
-#undef tir

@@ -1,7 +1,19 @@
 #include <iostream>
 
-#define EQUATION_1(i,b,a) sqrt((i * b) - (pow(b, 2) * a))
-#define EQUATION_2(y,n,b)  y * tan(n / 4) - exp(1 + b)
+
+
+float calculateExpressionOne(float i, float b, float a) {
+	float valueA = i * b;
+	float valueB = pow(b, 2) * a;
+
+	return sqrt(valueA - valueB);
+}
+float calculateExpressionTwo(float y, float n, float b) {
+	float valueA = y * tan(n / 4);
+	float valueB = exp(1 + b);
+
+	return sqrt(valueA - valueB);
+}
 
 void Task5() {
 	float y, z, a, b, n, i;
@@ -22,8 +34,8 @@ void Task5() {
 
 			scanf_s("%f", &i);
 
-			y = EQUATION_1(i,b,a);
-			z = EQUATION_2(y,n,b);
+			y = calculateExpressionOne(i, b, a);
+			z = calculateExpressionTwo(y, n, b);
 
 			std::cout << "\ny = " << y << std::endl;
 			std::cout << "\nz = " << z << std::endl;
@@ -38,8 +50,8 @@ void Task5() {
 			scanf_s("%f", &n);
 
 
-			y = EQUATION_1(i,b,a);
-			z = EQUATION_2(y,n,b);
+			y = calculateExpressionOne(i, b, a);
+			z = calculateExpressionTwo(y, n, b);
 
 			std::cout << "\ny = " << y << std::endl;
 			std::cout << "\nz = " << z << std::endl;
@@ -49,8 +61,8 @@ void Task5() {
 	case 3:
 		for (i = 1; i < 3; i += 0, 5) {
 			for (int n = 2; n < 3; n += 0.5) {
-				y = EQUATION_1(i,b,a);
-				z = EQUATION_2(y,n,b);
+				y = calculateExpressionOne(i, b, a);
+				z = calculateExpressionTwo(y, n, b);
 
 				std::cout << "\ny = " << y;
 				std::cout << " z = " << z << std::endl;
