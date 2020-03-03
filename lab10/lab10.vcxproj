@@ -139,9 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="lab10.cpp" />
-    <ClCompile Include="module\Task10.cpp" />
     <ClCompile Include="module\Task2_1.cpp" />
-    <ClCompile Include="module\Task2_2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab10.h" />
